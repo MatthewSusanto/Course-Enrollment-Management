@@ -1,5 +1,5 @@
 # ``COURSE ENROLLMENT MANAGEMENT APP``
-**Enroll in a course as a student, TA, or instructor with features such as duplicate email error handle, entry deletion, entry update, and more.**
+**A full-stack project to allow users to enroll in a course as a student, TA, or instructor with features such as duplicate email error handle, entry deletion, entry update, and more.**
 
 **Backend using Java, Spring Boot, PostgreSQL, Hibernate. Hosted on AWS utilizing EC2, S3, RDS. Frontend using JavaScript, jQuery, HTML, CSS.**
 
