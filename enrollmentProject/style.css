@@ -533,7 +533,7 @@ fieldset {
 
 
 .main_title{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 1.5rem;
     font-weight: 900;
@@ -626,4 +626,12 @@ select {
 }
 .extra__info strong{
     color: #ff9900;
+}
+
+.fa-github-square:hover{
+    color: #e56a00!important;
+}
+
+.fa-home:hover{
+    color: #e56a00!important;
 }
