@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/enrollmentProject/style.css">
+    <title>Course Enrollment Management App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- MODAL -->
+    <div id="openModal-create" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close" id="createform" onclick="closeForm()">X</a>
+            <form id="reg_form">
+                <h3>Please Fill the Form</h3>
+                <fieldset>
+                    <input placeholder="Full name" id="create_name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Email Address" id="create_email" type="email" tabindex="2" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="role" style="font-size: 1rem;">Select your role: </label>
+                    <select id="role">
+                        <option value="Student">Student</option>
+                        <option value="Ta">TA</option>
+                        <option value="Professor">Professor</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="role" style="font-size: 1rem;">Start year: </label>
+                    <select id="start_year">
+                        <option value="2021">2021-2022</option>
+                        <option value="2020">2020-2021</option>
+                        <option value="2019">2019-2020</option>
+                        <option value="2018">2018-2019</option>
+                        <option value="2017">2017-2018</option>
+                        <option value="2016">2016-2017</option>
+                        <option value="2015">2015-2016</option>
+                        <option value="2014">2014-2015</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <button type="button" id="create-submit" data-submit="...Sending">REGISTER NOW</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div id="openModal-edit" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close" onclick="closeForm()">X</a>
+            <form id="reg_form" action="" method="post">
+                <h3>Edit</h3>
+                <fieldset>
+                    <input id="edit_name" placeholder="Full name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input id="edit_email" placeholder="Email Address" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <button type="button" id="edit-submit" data-submit="...Sending">SAVE CHANGES</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST SECTION -->
+    <div class="toast-message" style="z-index: 999999;">
+        <span class="close"></span>
+        <div class="message"> </div>
+    </div>
+
+    <!-- HEAD SECTION -->
+    <div class="top">
+        <div class="top__section">
+            <div class="main_title">
+                MATH 1420
+            </div>
+            <div class="extra__info">
+                This app's Backend is created using <strong>Java, Spring Boot, Hibernate, PostgreSQL</strong>
+                <br />
+                Backend hosted on <strong>AWS</strong> utilizing <strong>EC2, S3, RDS</strong>
+                <br />
+                Frontend is created using <strong>JavaScript, jQuery, HTML, CSS</strong>
+            </div>
+            <div class="main_subtitle">
+                There are currently <strong style="font-size: 1.5rem; color: #ff9900;">
+                    <span id="student_amount"></span>/6
+                </strong> students enrolled in this course.
+            </div>
+            <br />
+            <a href="#openModal-create"><button class="btn mainbtn"> Register Now </button></a>
+        </div>
+    </div>
+
+    <!-- BOTTOM SECTION -->
+    <div class="bottom">
+        <div class="container clearfix">
+            <!-- STAFF SECTION -->
+            <div class="staffsect">
+                <h2 class="staff__title">STAFF</h2>
+                <div class="staff__list staff-members">
+                </div>
+            </div>
+
+            <!-- STUDENTS SECTION -->
+            <div class="studentssect">
+                <h2 class="students__title ">STUDENTS</h2>
+                <div class="students__list student-members">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/enrollmentProject/app.js"></script>
+
+</body>
+
+</html>

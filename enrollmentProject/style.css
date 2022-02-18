@@ -1,0 +1,629 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.right {     
+    position: absolute;
+    right: 13px;
+    top: 13px; 
+}
+.red { color: #2ba0f3 !important; }
+.red-focus:focus { border: 1px solid #2ba0f3 !important; }
+
+/**********************************************
+*** TOP PART
+**********************************************/
+
+.top {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.50)), url("https://www.oberlin.edu/sites/default/files/styles/width_1160/public/content/facility/image/craig_lecture_hall.jpg?itok=ueNhNDIK");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.top__section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.main_subtitle {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.budget__value {
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget__income,
+.budget__expenses {
+    padding: 12px;
+}
+
+.budget__income {
+    margin-bottom: 10px;
+    background-color: #ff9900;
+}
+
+.budget__expenses {
+    background-color: #2ba0f3;
+}
+
+.budget__income--text,
+.budget__expenses--text {
+    float: left;
+    font-size: 13px;
+    color: #444;
+    margin-top: 2px;
+}
+
+.budget__income--value,
+.budget__expenses--value {
+    letter-spacing: 1px;
+    float: left;
+}
+
+.budget__income--percentage,
+.budget__expenses--percentage {
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+}
+
+.budget__expenses--percentage {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 3px;
+}
+
+
+/**********************************************
+*** BOTTOM PART
+**********************************************/
+
+.bottom{
+	padding-bottom: 3rem;
+}
+
+/***** FORM *****/
+.add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+
+.add__container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add__type {
+    width: 55px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add__description,
+.add__value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.add__description { width: 400px;}
+.add__value { width: 100px;}
+.add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #ff9900 ;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add__btn:active { transform: translateY(2px); }
+.add__type:focus,
+.add__description:focus,
+.add__value:focus {
+    outline: none;
+    border: 1px solid #ff9900 ;
+}
+
+.add__btn:focus { outline: none; }
+
+/***** LISTS *****/
+.container {
+    width: 1000px;
+    margin: 60px auto;
+}
+
+.staffsect {
+    float: left;
+    width: 475px;
+    margin-right: 50px;
+}
+
+.studentssect {
+    float: left;
+    width: 475px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.staff__title { color: #ff9900 ; font-weight: 900; font-size: 1.8rem; text-align:center; margin-bottom: 3rem}
+.students__title { color: #2ba0f3; font-weight: 900;font-size: 1.8rem;  text-align:center; margin-bottom: 3rem}
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.member__name {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.member__role {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.item__percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.staffsect .member__role,
+.staffsect .item__delete--btn {
+    color: #ff9900;
+}
+
+.studentssect .member__role,
+.studentssect .item__percentage,
+.studentssect .item__delete--btn {
+    color: #2ba0f3;
+}
+
+.item__delete {
+    float: left;
+    display: flex;
+}
+
+.item__delete button{
+    margin-left: 0.5rem;
+}
+
+.item__delete--btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item__delete--btn:focus { outline: none; }
+.item__delete--btn:active { transform: translateY(2px); }
+
+.item:hover .item__delete--btn { display: block; }
+.item:hover .member__role { transform: translateX(-5px); }
+
+
+.unpaid {
+    background-color: #FFDAD9 !important;
+    cursor: pointer;
+    color: #2ba0f3;
+
+}
+
+.unpaid .item__percentage { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+.unpaid:hover .member__name { font-weight: 900; }
+
+.member_email a{
+    color: #979797;
+    text-decoration: underline;
+}
+
+.member__role{
+    font-weight: 900;
+}
+
+.btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: auto;
+}
+.btn:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.mainbtn {
+    border-color: #a94e00;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #e56a00 inset, 0 0 0 0 #a94e00;
+    transition: all 150ms ease-in-out;
+}
+.mainbtn:hover {
+    box-shadow: 0 0 10px 0 #a94e00 inset, 0 0 10px 4px #a94e00;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    margin: 10% auto;
+    /* padding: 20px; */
+    border-radius: 3px;
+    background: #fff;
+}
+.close {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f26d7d;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 34px;
+    height: 34px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+    padding-top: 5px;
+}
+.close:hover {
+    background: #fa3f6f;
+}
+
+#reg_form input[type="text"],
+#reg_form input[type="email"],
+#reg_form input[type="tel"],
+#reg_form input[type="url"],
+#reg_form textarea,
+#reg_form button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#reg_form {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#reg_form h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#reg_form h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#reg_form input[type="text"],
+#reg_form input[type="email"],
+#reg_form input[type="tel"],
+#reg_form input[type="url"],
+#reg_form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#reg_form input[type="text"]:hover,
+#reg_form input[type="email"]:hover,
+#reg_form input[type="tel"]:hover,
+#reg_form input[type="url"]:hover,
+#reg_form textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#reg_form textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#reg_form button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#create-submit {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  #edit-submit {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+#reg_form button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#reg_form button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#reg_form input:focus,
+#reg_form textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+
+.main_title{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+}
+
+select {
+	 border: 0;
+	 outline: 0;
+	 width: 10em;
+	 height: 2em;
+	 padding: 0 1em 0 1em;
+     border: 1px solid #ccc;
+	 color: black;
+	 border-radius: 0.25em;
+	 cursor: pointer;
+}
+ select option {
+	 color: inherit;
+	 background-color: white !important;
+}
+ select:focus {
+	 outline: none;
+}
+ select::-ms-expand {
+	 display: none;
+}
+ 
+.member_email{
+    color:#979797;
+}
+
+.current_year{
+    color:#979797;
+}
+
+/* TOAST */
+.toast-message {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 400px;
+    font-size: 16px;
+    transition: all 0.5s;
+    z-index: 9999;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 424px) {
+    .toast-message {
+        width: calc(100% - 20px);
+   }
+}
+.toast-message.success {
+    background: #64dd17;
+}
+.toast-message.danger {
+    background: #f44336;
+}
+.toast-message .message {
+    color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+}
+.toast-message .close {
+    position: absolute;
+    top: 25%;
+    right: 15px;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: #fff 0px 1px 0px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.toast-message .close::after {
+    content: "×";
+}
+.toast-message .close:hover {
+    opacity: 0.6;
+}
+
+.extra__info{
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 1.5rem;
+}
+.extra__info strong{
+    color: #ff9900;
+}
