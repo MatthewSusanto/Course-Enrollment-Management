@@ -1,4 +1,4 @@
-var apiUrl = 'https://corsanywhere.herokuapp.com/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class';
+var apiUrl = 'https://thingproxy.freeboard.io/fetch/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class';
 var counter = 0;
 
 // TOAST STUFF
@@ -108,7 +108,7 @@ function runAjax() {
 // DELETING MEMBERS
 function deleteMember(inp) {
     $.ajax({
-        url: `https://corsanywhere.herokuapp.com/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class/${inp}`,
+        url: `https://thingproxy.freeboard.io/fetch/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class/${inp}`,
         type: 'DELETE',
         success: function (result) {
             $(`#member-${inp}`).remove();
@@ -129,7 +129,7 @@ function openEditForm(name, email, id) {
         toEditEmail = $('#edit_email').val();
         if (toEditEmail.match(pattern) && toEditName.length > 1) {
             $.ajax({
-                url: `https://corsanywhere.herokuapp.com/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class/${id}?name=${toEditName}&email=${toEditEmail}`,
+                url: `https://thingproxy.freeboard.io/fetch/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class/${id}?name=${toEditName}&email=${toEditEmail}`,
                 type: "PUT",
                 success: function (resultData) {
                     $('.staff__list').html('');
@@ -162,7 +162,7 @@ function createForm(event) {
     if ($('#student_amount').html() < 6 || createRole !== "Student") {
         if (createEmail.match(pattern) && createName.length > 1) {
             $.ajax({
-                url: "https://corsanywhere.herokuapp.com/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class",
+                url: "https://thingproxy.freeboard.io/fetch/http://ec2-54-226-233-21.compute-1.amazonaws.com:8080/api/class",
                 type: "POST",
                 data: JSON.stringify({
                     name: createName,
