@@ -1,5 +1,5 @@
 # ``COURSE ENROLLMENT MANAGEMENT APP``
-# Available here: https://matthewsusanto.me/enroll
+<!-- # Available here: https://matthewsusanto.me/enroll -->
 **A full-stack project that allows users to enroll in a course as a student, TA, or instructor. The features include email duplicate prevention, entry deletion, entry update, and more.**
 
 **Backend using Java, Spring Boot, PostgreSQL, Hibernate. Hosted on AWS utilizing EC2, S3, RDS. Frontend using JavaScript, jQuery, HTML, CSS.**
